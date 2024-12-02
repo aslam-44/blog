@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="{% static 'images/icons/blog-logo.svg'%}"
+/>     
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .error-code {
+            font-size: 72px;
+            color: #4285f4;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        p {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 26px;
+        }
+        img{
+            width: 300px;
+            height: 300px;
+        }
+        .button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-top: 50px;
+        }
+        .icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+    </style>
+    <title>404 - Page Not Found</title>
+      
+</head>
+<body>
+    <div class="container">
+        <img src="https://steyp.com/static/media/404.a443adcd.svg" alt="">
+        <h1>Page Not Found</h1>
+        <p>You seems to have clicked on a broken link or entered a URL 
+            <br>
+            that doesn't exist on this site.
+        </p>
+        <a href="{% url 'web:index' %}" class="button">Go to Dashboard</a>
+    </div>
+</body>
+</html>
